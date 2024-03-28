@@ -61,10 +61,10 @@
 46    terrain@0,736     (noburn)(description=#3)
 47    terrain@0,752     (noburn)(description=#3)
 # BEGIN FLOODING (4 frames) #
-48    terrain@0,768     (noburn)(overwater)(description=#4)(behavior=FLOOD)
-49    terrain@0,784     (noburn)(overwater)(description=#4)(behavior=FLOOD)
-50    terrain@0,800     (noburn)(overwater)(description=#4)(behavior=FLOOD)
-51    terrain@0,816     (noburn)(overwater)(description=#4)(behavior=FLOOD)
+48    terrain@0,768     (noburn)(description=#4)(behavior=FLOOD)
+49    terrain@0,784     (noburn)(description=#4)(behavior=FLOOD)
+50    terrain@0,800     (noburn)(description=#4)(behavior=FLOOD)
+51    terrain@0,816     (noburn)(description=#4)(behavior=FLOOD)
 # BEGIN RADIATION #
 52    terrain@0,832     (noburn)(description=#5)(behavior=RADIOACTIVE)(pollution=255)
 53    terrain@0,848     (noburn)(description=#5)(behavior=RADIOACTIVE)(pollution=255)
@@ -637,6 +637,7 @@
 609   com_zones@0,992        (conducts)
 610   com_zones@16,992       (conducts)
 611   com_zones@32,992       (conducts)
+# 999   com_zones@16,1004 (zone)(conducts)(building=3x3)(commercial-zone)(behavior=COMMERCIAL)(population=40)(description=#11)
 # BEGIN INDUSTRIAL #
 612   ind_zones@0,0          (conducts)
 613   ind_zones@16,0         (conducts)
@@ -1009,3 +1010,14 @@
 957   misc_animation@0,2080
 958   misc_animation@0,2096
 959   misc_animation@0,2112
+
+# BEGIN FIRE DEPT #
+960   magichouse@0,0         (conducts)
+961   magichouse@16,0        (conducts)
+962   magichouse@32,0        (conducts)
+963   magichouse@0,16        (conducts)
+964   magichouse@16,16 (zone)(conducts)(building=3x3)(behavior=MAGICHOUSE)(description=#16)
+965   magichouse@32,16       (conducts)
+966   magichouse@0,32        (conducts)
+967   magichouse@16,32       (conducts)
+968   magichouse@32,32       (conducts)

@@ -41,7 +41,8 @@ class MapScanner extends TileBehavior
 		STADIUM_EMPTY,
 		STADIUM_FULL,
 		AIRPORT,
-		SEAPORT;
+		SEAPORT,
+		MAGICHOUSE;
 	}
 
 	@Override
@@ -84,6 +85,8 @@ class MapScanner extends TileBehavior
 		case SEAPORT:
 			doSeaport();
 			return;
+		case MAGICHOUSE:
+			doMagicHouse();
 		default:
 			assert false;
 		}
@@ -309,6 +312,19 @@ class MapScanner extends TileBehavior
 
 		if (powerOn && !city.hasSprite(SpriteKind.SHI)) {
 			city.generateShip();
+		}
+	}
+	
+	void doMagicHouse()
+	{
+		boolean powerOn = checkZonePower();
+		city.magichouseCount++;
+		if ((city.cityTime % 16) == 0) {
+			repairZone(PORT, 4);
+		}
+
+		if (powerOn && !city.hasSprite(SpriteKind.SHI)) {
+			city.doMagic();
 		}
 	}
 

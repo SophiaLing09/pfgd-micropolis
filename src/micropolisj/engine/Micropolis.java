@@ -125,6 +125,7 @@ public class Micropolis
 	int nuclearCount;
 	int seaportCount;
 	int airportCount;
+	int magichouseCount;
 
 	int totalPop;
 	int lastCityPop;
@@ -1535,6 +1536,10 @@ public class Micropolis
 				}
 			}
 		}
+	}
+	
+	void doMagic() {
+		return;
 	}
 
 	Sprite getSprite(SpriteKind kind)

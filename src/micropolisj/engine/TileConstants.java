@@ -145,7 +145,7 @@ public class TileConstants
 	static final char TINYEXP = 860;
 	
 	
-	static final char MAGICHOUSE=960;
+	static final char MAGICHOUSE=964;
 	
 	
 	

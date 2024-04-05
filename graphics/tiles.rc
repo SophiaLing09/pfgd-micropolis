@@ -1010,13 +1010,12 @@
 957   misc_animation@0,2080
 958   misc_animation@0,2096
 959   misc_animation@0,2112
-
-# BEGIN FIRE DEPT #
+# BEGIN MAGICHOUSE #
 960   magichouse@0,0         (conducts)
 961   magichouse@16,0        (conducts)
 962   magichouse@32,0        (conducts)
 963   magichouse@0,16        (conducts)
-964   magichouse@16,16 (zone)(conducts)(building=3x3)(behavior=MAGICHOUSE)(description=#16)
+964   magichouse@16,16 (zone)(conducts)(building = 3x3)(behavior = MAGICHOUSE)(description = #16)
 965   magichouse@32,16       (conducts)
 966   magichouse@0,32        (conducts)
 967   magichouse@16,32       (conducts)

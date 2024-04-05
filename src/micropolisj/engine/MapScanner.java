@@ -324,7 +324,30 @@ class MapScanner extends TileBehavior
 		}
 
 		if (powerOn && !city.hasSprite(SpriteKind.SHI)) {
-			city.doMagic();
+			int magicNumber = new java.util.Random().nextInt(6) + 1;
+		    switch (magicNumber) {
+		        case 1:
+		        	if(city.comPop!=0) city.comPop+=1000;
+		            break;
+		        case 2:
+		        	if(city.indPop!=0) city.indPop+=1000;
+		            break;
+		        case 3:
+		        	if(city.resPop!=0) city.resPop+=1000;
+		            break;
+		        case 4:
+		        	if(city.comPop>100) city.comPop-=100;
+		            break;
+		        case 5:
+		        	if(city.indPop>500) city.indPop-=500;
+		            break;
+		        case 6:
+		        	if(city.resPop>1000) city.resPop-=1000;
+		            break;
+		        default:
+		            break;
+		    }
+			return;
 		}
 	}
 

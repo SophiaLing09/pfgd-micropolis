@@ -1468,6 +1468,7 @@ public class Micropolis
 		bb.put("STADIUM_FULL", new MapScanner(this, MapScanner.B.STADIUM_FULL));
 		bb.put("AIRPORT", new MapScanner(this, MapScanner.B.AIRPORT));
 		bb.put("SEAPORT", new MapScanner(this, MapScanner.B.SEAPORT));
+		bb.put("MAGICHOUSE",new MapScanner(this, MapScanner.B.MAGICHOUSE));
 
 		this.tileBehaviors = bb;
 	}
@@ -1539,6 +1540,24 @@ public class Micropolis
 	}
 	
 	void doMagic() {
+		int magicNumber = new java.util.Random().nextInt(6) + 1;
+	    switch (magicNumber) {
+	        case 1:
+	        	comPop+=1000;
+	            break;
+	        case 2:
+	            break;
+	        case 3:
+	            break;
+	        case 4:
+	            break;
+	        case 5:
+	            break;
+	        case 6:
+	            break;
+	        default:
+	            break;
+	    }
 		return;
 	}
 

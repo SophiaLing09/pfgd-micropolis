@@ -314,35 +314,39 @@ class MapScanner extends TileBehavior
 			city.generateShip();
 		}
 	}
-	
+	/*
+	 * This is a function for the magic house.
+	 * The magic house grants a random benefit or incurs a loss when the building is constructed. 
+	 * It is an interesting structure full of randomness, bringing joy to players who seek uncertainty.
+	 */
 	void doMagicHouse()
 	{
-		boolean powerOn = checkZonePower();
+		boolean powerOn = checkZonePower();//First check if the building has power
 		city.magichouseCount++;
 		if ((city.cityTime % 16) == 0) {
 			repairZone(PORT, 4);
 		}
 
 		if (powerOn && !city.hasSprite(SpriteKind.SHI)) {
-			int magicNumber = new java.util.Random().nextInt(6) + 1;
+			int magicNumber = new java.util.Random().nextInt(6) + 1;//Generate a new random magic number
 		    switch (magicNumber) {
 		        case 1:
-		        	if(city.comPop!=0) city.comPop+=1000;
+		        	if(city.comPop!=0) city.comPop+=1000;// A benefit on commercial area
 		            break;
 		        case 2:
-		        	if(city.indPop!=0) city.indPop+=1000;
+		        	if(city.indPop!=0) city.indPop+=1000;// A benefit on industrial area
 		            break;
 		        case 3:
-		        	if(city.resPop!=0) city.resPop+=1000;
+		        	if(city.resPop!=0) city.resPop+=1000;// A benefit on residential area
 		            break;
 		        case 4:
-		        	if(city.comPop>100) city.comPop-=100;
+		        	if(city.comPop>100) city.comPop-=100;// An incurs on commercial area
 		            break;
 		        case 5:
-		        	if(city.indPop>500) city.indPop-=500;
+		        	if(city.indPop>500) city.indPop-=500;// An incurs on industrial area
 		            break;
 		        case 6:
-		        	if(city.resPop>1000) city.resPop-=1000;
+		        	if(city.resPop>1000) city.resPop-=1000;// An incurs on residential area
 		            break;
 		        default:
 		            break;
